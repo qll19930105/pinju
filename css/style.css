@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+/* 通用样式 */
+
+body {
+    color: #666;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+a:hover {
+    color: #da0d5d;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+td {
+    line-height: 20px;
+}
+
+.clear {
+    width: 1px;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.page {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.page a {
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    margin: 0 3px;
+}
+
+.page a.current,
+.page a:hover {
+    color: #fff;
+    border: 1px solid #da0d5d;
+    background: #da0d5d;
+}
+
+input,
+select,
+textarea {
+    font-family: "微软雅黑";
+    outline: none;
+    color: #666;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.pic_effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.pic_effect img {
+    display: block;
+    width: 100%;
+    /* vertical-align:bottom; */
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transform: scale(1, 1);
+    transition: all 0.3s ease 0s;
+}
+
+.pic_effect a {
+    display: block;
+    background: #fff;
+    transition: background 0.3s ease 0s;
+}
+
+.pic_effect a:hover img {
+    transform: scale(1.08, 1.08);
+}
+
+.prop {
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    top: 50px;
+    left: 0px;
+    transition: all 0.3s ease 0s;
+    font-size: 2.4em;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.33em 0.83em 0.42em;
+    line-height: 1.17em;
+}
+
+.pic_effect a:hover .prop {
+    top: 10px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+
+/* 头部 welcome*/
+
+.headbg {
+    min-width: 1200px;
+    height: 32px;
+    line-height: 32px;
+    background: #f2f2f2;
+}
+
+.warpbox {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.headr a {
+    display: inline-block;
+    margin-left: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 6px;
+}
+
+.headr a.icart {
+    background: url(../images/ico1.png) no-repeat center left;
+    padding-left: 25px;
+}
+
+.headr a.izntxz {
+    background: url(../images/ico2.png) no-repeat center left;
+    padding-left: 25px;
+}
+
+.headr a.iapp {
+    background: url(../images/ico3.png) no-repeat center left;
+    padding-left: 18px;
+}
+
+
+/* 头部logo */
+
+.warpbox2 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.top {
+    min-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 0;
+    height: 80px;
+    background: url(../images/bg1.png);
+}
+
+.logo {
+    height: 80px;
+    float: left;
+}
+
+.top_search {
+    float: left;
+    width: 360px;
+    margin-left: 130px;
+}
+
+.tsclass {
+    width: 100%;
+    height: 20px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.tjkeys {
+    width: 358px;
+    overflow: hidden;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    z-index: 99;
+}
+
+.search {
+    float: left;
+    width: 338px;
+    padding: 0 10px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    position: relative;
+}
+
+.input1 {
+    width: 318px;
+    border: 0;
+    height: 38px;
+    float: left;
+}
+
+.button1 {
+    float: left;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background: url(../images/ico5.png);
+    margin-top: 9px;
+    cursor: pointer;
+}
+
+.toptel {
+    float: right;
+    height: 80px;
+    background: url(../images/ico4.png) no-repeat center left;
+    padding-left: 62px;
+}
+
+.toptel p {
+    color: #da0d5d;
+    margin: 12px 0 5px 0;
+}
+
+.toptel span {
+    font-size: 30px;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #000;
+}
