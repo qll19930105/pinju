@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+/* 通用样式 */
+
+body {
+    color: #666;
+    font: 14px Helvetica Neue, Helvetica, PingFang SC, Tahoma, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+a:hover {
+    /* color: #da0d5d; */
+    text-decoration: none;
+    color: #666;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+td {
+    line-height: 20px;
+}
+
+.clear {
+    width: 1px;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.page {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.page a {
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    margin: 0 3px;
+}
+
+.page a.current,
+.page a:hover {
+    color: #fff;
+    border: 1px solid #da0d5d;
+    background: #da0d5d;
+}
+
+input,
+select,
+textarea {
+    font-family: "微软雅黑";
+    outline: none;
+    color: #666;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.pic_effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.pic_effect img {
+    display: block;
+    width: 100%;
+    /* vertical-align:bottom; */
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transform: scale(1, 1);
+    transition: all 0.3s ease 0s;
+}
+
+.pic_effect a {
+    display: block;
+    background: #fff;
+    transition: background 0.3s ease 0s;
+}
+
+.pic_effect a:hover img {
+    transform: scale(1.08, 1.08);
+}
+
+.prop {
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    top: 50px;
+    left: 0px;
+    transition: all 0.3s ease 0s;
+    font-size: 2.4em;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.33em 0.83em 0.42em;
+    line-height: 1.17em;
+}
+
+.pic_effect a:hover .prop {
+    top: 10px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+
+/* 注册和登录页面用 头部样式2 */
+
+#top2 {
+    height: 80px;
+    width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 24px 0;
+}
+
+#topLogo2 {
+    height: 50px;
+    float: left;
+    margin-top: 15px;
+    vertical-align: middle;
+}
+
+#topTel2 {
+    float: right;
+    height: 80px;
+    background: url(../img/header/ico4.png) no-repeat center left;
+    padding-left: 62px;
+}
+
+#topTel2 p {
+    color: #da0d5d;
+    margin: 12px 0 5px 0;
+}
+
+#topTel2 span {
+    font: bold 30px Arial, HelHelvetica, sans-serif;
+    color: #000;
+}
+
+
+/* 注册和登录页面用 底部样式2 */
+
+.footer2 {
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.footer2>ul {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.footer2 li {
+    text-align: center;
+    height: 30px;
+}
+
+.footer2 li a {
+    display: inline-block;
+    line-height: 30px;
+    color: #000;
+    margin: 0 21px;
+}
+
+.footer2 li a:hover {
+    color: #666;
+}
+
+.footer2.copyRight {
+    line-height: 30px;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 0;
+}
+
+
+/* 通用父元素 */
+
+.wrapbox {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}

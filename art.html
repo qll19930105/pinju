@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/comm.css">
+    <link rel="stylesheet" href="css/art.css">
+
+</head>
+
+<body>
+    <header id="header"></header>
+    <main id="art">
+        <div class="wrapbox">
+            <!-- 轮播图 -->
+            <div class="art_1">
+                <div class="fl">
+                    <ul id="art_imgs" class="transition">
+                        <li>
+                            <a href="javascript:;"><img src="img/art/art_1.jpeg"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="img/art/art_2.jpeg"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="img/art/art_3.jpeg"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="img/art/art_1.jpeg"></a>
+                        </li>
+                    </ul>
+                    <div id="art_idxs">
+                        <span class="hov" data-id="0"></span>
+                        <span data-id="1"></span>
+                        <span data-id="2"></span>
+                    </div>
+                </div>
+                <div class="fr">
+                    <div>
+                        <a href="javascript:;"><img src="img/icon/pic13.jpg"></a>
+                    </div>
+                    <div>
+                        <p>艺术家指数</p>
+                        <table cellpadding="0" cellspacing="0">
+                            <tr>
+                                <th>名字</th>
+                                <th>均价(元)</th>
+                                <th>涨跌幅</th>
+                            </tr>
+                            <tr>
+                                <td>邓箭今</td>
+                                <td>1,550</td>
+                                <td>↓ 15%</td>
+                            </tr>
+                            <tr>
+                                <td>欧广勇</td>
+                                <td>1,400</td>
+                                <td>↓ 0%</td>
+                            </tr>
+                            <tr>
+                                <td>韩建宇</td>
+                                <td>813</td>
+                                <td>↓ 19%</td>
+                            </tr>
+                            <tr>
+                                <td>陈公拓</td>
+                                <td>0</td>
+                                <td>↓ 0%</td>
+                            </tr>
+                            <tr>
+                                <td>郑川</td>
+                                <td>0</td>
+                                <td>↓ 0%</td>
+                            </tr>
+                            <tr style=" border-bottom: 10px solid #fff;">
+                                <td>张展欣</td>
+                                <td>0</td>
+                                <td>↓ 0%</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="art_tj">
+                <div class="art_sub_title">
+                    <p class="fl">每日推荐</p>
+                    <a class="fr">更多&gt;&gt;</a>
+                </div>
+                <div class="art_sub_main">
+                    <div class="fl">
+                        <a href="javascript:;"><img src="img/art/art_mrtj_l.jpeg"></a>
+                    </div>
+                    <div class="fr">
+                        <ul id="art_mrtj">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="art_tj">
+                <div class="art_sub_title">
+                    <p class="fl">人气推荐</p>
+                    <a class="fr">更多&gt;&gt;</a>
+                </div>
+                <div class="art_sub_main">
+                    <div class="fl">
+                        <a href="javascript:;"><img src="img/art/art_rqtj_l.jpeg"></a>
+                    </div>
+                    <div class="fr">
+                        <ul id="art_rqtj">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="art_jxzt">
+                <div class="art_sub_title">
+                    <p class="fl">精选专题</p>
+                    <a class="fr">更多&gt;&gt;</a>
+                </div>
+                <div class="art_jxzt_main">
+                    <p>
+                        <a href="javascript:;"><img src="img/art/jxzt_1.jpeg"></a>
+                    </p>
+                    <p>
+                        <a href="javascript:;"><img src="img/art/jxzt_2.jpeg"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/art.js"></script>
+    <script src="js/footer.js"></script>
+    <script>
+    </script>
+    <script>
+        var LIWIDTH = 930;
+        var LICOUNT = 3;
+        var i = 0;
+        var DURATION = 500;
+        var CANCLICK = true;
+
+        var ulImgs = document.getElementById("art_imgs");
+        var ulIdxs = document.getElementById("art_idxs");
+        console.log(ulIdxs)
+        var lis = ulIdxs.children;
+
+        function moveTo(to) {
+            if (to == undefined) {
+                to = i + 1;
+            }
+            if (i == 0) {
+                if (to > i) {
+                    ulImgs.className = "transition";
+                } else {
+                    ulImgs.className = "";
+                    ulImgs.style.marginLeft = -LIWIDTH * LICOUNT + "px";
+                    setTimeout(function() {
+                        moveTo(LICOUNT - 1);
+                    }, 100);
+                    return;
+                }
+            }
+            i = to;
+            console.log(i)
+            ulImgs.style.marginLeft = -i * LIWIDTH + "px";
+            for (var li of lis) {
+                li.className = "";
+            }
+            if (i == LICOUNT) {
+                i = 0;
+                setTimeout(function() {
+                    ulImgs.className = "";
+                    ulImgs.style.marginLeft = 0;
+                }, DURATION)
+            }
+            lis[i].className = "hov";
+        }
+        ulIdxs.onclick = function(e) {
+            var span = e.target;
+            if (span.nodeName == "SPAN") {
+                if (span.className !== "hov") {
+                    for (var i = 0; i < lis.length; i++) {
+                        if (lis[i] == span) {
+                            break;
+                        }
+                    }
+                    moveTo(i);
+                }
+            }
+        }
+        var interval = 2000;
+        var timer = setInterval(function() {
+            moveTo();
+        }, interval);
+    </script>
+</body>
+
+</html>

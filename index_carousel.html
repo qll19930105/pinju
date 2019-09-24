@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>boot</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 4%;
+            height: 20%;
+            top: 40%;
+            background: #eee;
+            border-radius: 0.5rem;
+        }
+        
+        .carousel-indicators li {
+            width: 0.5rem;
+            height: 0.5rem;
+            background: #ddd;
+            margin: 0 0.4rem;
+            border-radius: 50%;
+        }
+        
+        .carousel-indicators .active {
+            background: #666;
+        }
+        
+        #rec-daily a>img {
+            width: 100%;
+        }
+        
+        #rec-daily a {
+            color: #222;
+        }
+        
+        #rec-daily a:hover {
+            color: #666;
+            text-decoration: none;
+        }
+        
+        hr.bg-dark {
+            height: 0.08rem;
+        }
+        
+        #nav li.nav-item>a {
+            color: #fff;
+        }
+        
+        #nav li.nav-item>a:hover {
+            background: #f33;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- bootstrap 轮播图 -->
+    <div class="container">
+        <!-- 导航栏 -->
+        <div id="nav">
+            <!-- 水平导航栏 -->
+            <div class="bg-dark p-0">
+                <ul class="nav nav-justified">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">艺术品</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">拍卖</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">艺术家</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">每日推荐</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">艺术资讯</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">艺术机构</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">商品置换</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 选项卡导航 -->
+            <div id="nav-tabs">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- 首页轮播图 -->
+        <div class="carousel" data-ride="carousel" id="demo">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/index/banner01.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/index/banner02.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/index/banner03.png" alt="">
+                </div>
+                <a href="#demo" data-slide="prev" class="carousel-control-prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a href="#demo" data-slide="next" class="carousel-control-next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 每日推荐 -->
+        <section>
+            <h3 class="text-center mt-3 pt-5 pb-3">每日推荐</h3>
+            <div class="carousel  mb-4" id="rec-daily">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <ul class="list-unstyled list-group" style="flex-direction: row;">
+                            <li class="text-center mr-4">
+                                <a href="">
+                                    <img src="img/index/rec_daily_1.jpeg" class="border" alt="">
+                                </a><br>
+                                <a href="" class="d-inline-block pt-3">《平静只是一种表象》</a>
+                            </li>
+                            <li class="text-center mr-4">
+                                <a href="">
+                                    <img src="img/index/rec_daily_2.jpeg" class=" border" alt="">
+                                </a><br>
+                                <a href="" class="d-inline-block pt-3">玉女 Teenage girl</a>
+                            </li>
+                            <li class="text-center mr-4">
+                                <a href="">
+                                    <img src="img/index/rec_daily_3.jpeg" class="border" alt="">
+                                </a><br>
+                                <a href="" class="d-inline-block pt-3">距离</a>
+                            </li>
+                            <li class="text-center">
+                                <a href="">
+                                    <img src="img/index/rec_daily_4.jpeg" class="border" alt="">
+                                </a><br>
+                                <a href="" class="d-inline-block pt-3">厚德载物</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="carousel-item">
+                        <ul class="list-unstyled list-group" style="flex-direction: row;">
+                            <li class="text-center mr-4">
+                                <a href="">
+                                    <img src="img/index/rec_daily_5.jpeg" class="border" alt="">
+                                </a><br>
+                                <a href="" class="d-inline-block pt-3">山水画卷之捍卫者</a>
+                            </li>
+                            <li class="text-center mr-4">
+                                <a href="">
+                                    <img src="img/index/rec_daily_6.jpeg" class=" border" alt="">
+                                </a><br>
+                                <a href="" class="d-inline-block pt-3">《儒者之性》</a>
+                            </li>
+                            <li class="text-center mr-4">
+                                <a href="">
+                                    <img src="img/index/rec_daily_7.jpeg" class="border" alt="">
+                                </a><br>
+                                <a href="" class="d-inline-block pt-3">云NO.2</a>
+                            </li>
+                            <li class="text-center">
+                                <a href="">
+                                    <img src="img/index/rec_daily_8.jpeg" class="border" alt="">
+                                </a><br>
+                                <a href="" class="d-inline-block pt-3">渔翁钓月，农父耕霞</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#rec-daily" class="carousel-control-prev" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a href="#rec-daily" class="carousel-control-next" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 人气推荐 -->
+        <hr class="bg-dark">
+    </div>
+</body>
+
+</html>

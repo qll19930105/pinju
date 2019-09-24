@@ -3,55 +3,712 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>品聚艺术鉴赏交易平台</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/comm.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
+    <header>
+        <iframe src="header.html" width="100%" height="210px" frameborder="0" scrolling="no"></iframe>
+    </header>
 
-    <!-- 头部welcome -->
-    <div class="headbg" id="gotop">
-        <div class="wrapbox">
-            <div class="fl">欢迎光临品聚艺术鉴赏交易平台</div>
-            <div class="headr fr">
-                <a href="">请登陆</a>
-                <a href="">免费注册</a>
-                <a href="" class="icart">购物车</a>
-                <a href="" class="izntxz">紫泥堂艺术小镇</a>
-                <a href="" class="iapp">APP</a>
+
+    <!-- 5L 首页视频 放这 是想以body为已定位父元素左绝对定位 -->
+    <div id="v_sp_cancel" style="display:none;">
+        <video src="img/index/sp.mp4" controls id="v_sp"></video>
+        <img src="img/icon/close.png" id="cancel_bf">
+    </div>
+
+
+    <!-- 首页导航下的下拉选择链接栏 -->
+    <div class="wrapbox2" style="z-index: 1000;">
+        <div class="topss">
+            <div class="xiahua">
+                <li>
+                    <div class="xiahua_m">
+                        <a href="">彭志健</a>
+                        <a href="">朱德玲</a>
+                        <a href="">张展欣</a>
+                        <a href="">郑川</a>
+                        <a href="">石磊</a>
+                        <a href="">江衡</a>
+                        <a href="">张海鹏</a>
+                        <a href="">黄一山</a>
+                        <a href="">莫希亮</a>
+                        <a href="">彭杜</a>
+                        <a href="">庄鸿杰</a>
+                        <a href="">杨倩</a>
+                        <a href="">李冠廷</a>
+                        <a href="">付毅兵</a>
+                        <a href="">陈文令</a>
+                        <a href="">张琪凯</a>
+                        <a href="">苍鑫</a>
+                        <a href="">蔡全利</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="xiahua_m">
+                        <a href="">版画</a>
+                        <a href="">漆画</a>
+                        <a href="">壁画</a>
+                        <a href="">陶瓷</a>
+                        <a href="">书法篆刻</a>
+                        <a href="">插画</a>
+                        <a href="">其他</a>
+                        <a href="">油画</a>
+                        <a href="">水墨画</a>
+                        <a href="">唐卡</a>
+                        <a href="">拓片</a>
+                    </div>
+                </li>
+                <li class="noright">
+                    <div class="xiahua_m">
+                        <a href="">广州日报</a>
+                        <a href="">腾讯大粤网</a>
+                        <a href="">网易艺术</a>
+                        <a href="">新浪收藏</a>
+                        <a href="">雅昌艺术</a>
+                        <a href="">在艺</a>
+                    </div>
+                </li>
+            </div>
+            <li><span>找艺术家</span><a href="">邓箭今</a><a href="">韩建宇</a><a href="">陈公拓</a></li>
+            <li><span>找艺术品</span><a href="">丙烯</a><a href="">复制品</a><a href="">综合材料</a></li>
+            <li class="noright"><span>找机构</span><a href="">三版工坊</a><a href="">紫泥堂艺术</a><a href="">生活艺术地</a></li>
+        </div>
+    </div>
+
+    <!-- 首页轮播图 -->
+    <div style="z-index:1;">
+        <div class="carousel" data-ride="carousel" id="demo">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/index/banner01.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/index/banner02.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/index/banner03.png" alt="">
+                </div>
+                <a href="#demo" data-slide="prev" class="carousel-control-prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a href="#demo" data-slide="next" class="carousel-control-next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
             </div>
         </div>
     </div>
-    <!-- 头部 logo -->
-    <div class="top">
-        <div class="wrapbox2">
-            <a href=""><img src="../images/logo.png" alt="" class="logo"></a>
-            <div class="top_search" style="overflow: inhert;">
-                <form action="" autocomplete="off">
-                    <div class="tsclass" id="tsclass">
-                        <a href="" class="nochecked" style="color: rgb(102, 102, 102) ;color: #da0d5d;font-weight: bold;">艺术品</a>
-                        <a href="" class="nochecked" style="color: rgb(102, 102, 102) ;">拍卖</a>
-                        <a href="" class="nochecked" style="color: rgb(102, 102, 102) ;">艺术家</a>
-                        <a href="" class="nochecked" style="color: rgb(102, 102, 102) ;">资讯</a>
+
+    <!-- 网页主体内容 -->
+    <div class="wrapbox">
+        <!-- 1L 每日推荐 —标题-->
+        <div class="title_daily">
+            每日推荐
+        </div>
+        <!-- 1L 每日推荐 --内容 -->
+        <div class="main_daily" id="main_daily">
+            <div id="arrow_left"></div>
+            <ul id="daily_imgs">
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/index/rec_daily_1.jpeg">
+                    </a>
+                    <a href="javascript:;">《平静只是一种表象》</a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/index/rec_daily_2.jpeg">
+                    </a>
+                    <a href="javascript:;">玉女 Teenage girl</a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/index/rec_daily_3.jpeg">
+                    </a>
+                    <a href="javascript:;">距离</a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/index/rec_daily_4.jpeg">
+                    </a>
+                    <a href="javascript:;">厚德载物</a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/index/rec_daily_5.jpeg">
+                    </a>
+                    <a href="javascript:;">山水画卷之捍卫者</a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/index/rec_daily_6.jpeg">
+                    </a>
+                    <a href="javascript:;">《儒者之性》</a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/index/rec_daily_7.jpeg">
+                    </a>
+                    <a href="javascript:;">云NO.2</a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="img/index/rec_daily_8.jpeg">
+                    </a>
+                    <a href="javascript:;">渔翁钓月，农父耕霞</a>
+                </li>
+            </ul>
+            <div id="arrow_right"></div>
+        </div>
+
+        <!--2L  人气推荐 --标题-->
+        <div class="rqtj">
+            <div class="web_top">
+                <div class="fl">
+                    人气推荐
+                </div>
+                <a href="javascript:;" class="fr">更多&gt;&gt;</a>
+            </div>
+            <div class="main_rqtj">
+                <div class="rqtj_left">
+                    <div class="rqtj_banner">
+                        <ul id="rqtj_images" class="transition">
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="img/index/banner_pop1.jpeg">
+                                    <p>有磨砂玻璃的浴室</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="img/index/banner_pop2.jpeg">
+                                    <p>唱丰年</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="img/index/banner_pop3.jpeg">
+                                    <p>山水画卷之捍卫者</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="img/index/banner_pop1.jpeg">
+                                    <p>有磨砂玻璃的浴室</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="rqtj_slidenum" id="rqtj_slidenum">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
-                    <div class="clear"></div>
-                    <div class="search">
-                        <div class="tjkeys"></div>
-                        <input type="text" name="keywords" class="input1" placeholder="请输入艺术品名称" value oninput="tjkeys(this.value)">
-                        <input type="hidden" name="cate_id">
-                        <input type="hidden" name="theme">
-                        <input type="hidden">
-                        <input type="hidden" name="style">
-                        <input type="submit" class="button1" value>
+                    <div class="rqtj_subtitle">
+                        <a href="javascript:;">插画</a><a href="javascript:;">陶瓷</a><a href="javascript:;">壁画</a><a href="javascript:;">漆画</a><a href="javascript:;">版画</a><a href="javascript:;">书法篆刻</a><a href="javascript:;">丙烯</a><a href="javascript:;">复制品</a>
+                        <a href="javascript:;">综合材料</a>
                     </div>
+                </div>
+                <div class="rqtj_right">
+                    <ul>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_1.jpeg"></a><a href="javascript:;">中国海滩</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_2.jpeg"></a><a href="javascript:;">《儒者之性》</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_3.jpeg"></a><a href="javascript:;">孙悟空</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_4.jpeg"></a><a href="javascript:;">迷雾之四 Dense fog</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_5.jpeg"></a><a href="javascript:;">惊蛰/春/秋月如钩</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_6.jpeg"></a><a href="javascript:;">A5</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_7.jpeg"></a><a href="javascript:;">静观自在 Self-reflection</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_8.jpeg"></a><a href="javascript:;">《金色的召唤》</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_9.jpeg"></a><a href="javascript:;">美国河的春天</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_10.jpeg"></a><a href="javascript:;">Memory</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_11.jpeg"></a><a href="javascript:;">幻境</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_12.jpeg"></a><a href="javascript:;">《get high》</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_13.jpeg"></a><a href="javascript:;">惠风和畅</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_14.jpeg"></a><a href="javascript:;">作品一</a></li>
+                        <li>
+                            <a href="javascript:;"><img src="img/index/rec_pop_15.jpeg"></a><a href="javascript:;">《作品三》</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3L 拍卖专场 --banner-->
+        <div class="banner1">
+            <a href=""><img src="img/index/paimai_banner.jpeg"></a>
+        </div>
+        <!-- 3L 新闻 -->
+        <div class="index_news">
+            <div class="index_newsf">
+                <ul id="news_images" class="transition">
+                    <li>
+                        <img src="img/index/index_news1.jpeg">
+                        <p>紫泥堂 · 未来进行时——中国当代艺术邀请展 | 第六届广州三年展平行展</p>
+                    </li>
+                    <li>
+                        <img src="img/index/index_news2.jpeg">
+                        <p>“连接心灵 共创未来”——3+3当代艺术区开幕展圆满成功</p>
+                    </li>
+                    <li>
+                        <img src="img/index/index_news3.jpeg">
+                        <p>关系与呈现|广州美术学院油画系研究生邀请展</p>
+                    </li>
+                    <li>
+                        <img src="img/index/index_news1.jpeg">
+                        <p>紫泥堂 · 未来进行时——中国当代艺术邀请展 | 第六届广州三年展平行展</p>
+                    </li>
+                </ul>
+                <div id="news_slidenum">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="index_newsr">
+                <div id="index_newsr_title">
+                    <ul>
+                        <li class="hover">媒体资讯</li>
+                        <li>三年展专题</li>
+                    </ul>
+                </div>
+                <div id="index_newsr_text">
+                    <ul class="block">
+                        <a href="javascript:;" class="more">更多&gt;&gt;</a>
+                        <li>
+                            <div class="fl"><a href="javascript:;">香港顶级的巴塞尔艺术展！别再瞎逛了，艺术家、内行带你看门道！</a></div>
+                            <div class="fr">2019-03-12</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">“抽象的引言”Vanities广州画廊三人展开幕</a></div>
+                            <div class="fr">2019-01-23</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">“连接心灵 共创未来”——3+3当代艺术区开幕展圆满成功</a></div>
+                            <div class="fr">2019-01-04</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">皇帝也造假字画 古字画伪作亦有真价值</a></div>
+                            <div class="fr">2018-12-03</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">中国文房四宝之砚简谈</a></div>
+                            <div class="fr">2018-12-03</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">明瓷：拍卖场上的常青树 清淡又奢华</a></div>
+                            <div class="fr">2018-12-03</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">《国家宝藏》，中国5000年文明的回眸</a></div>
+                            <div class="fr">2018-12-03</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">紫砂陶艺的历史</a></div>
+                            <div class="fr">2018-12-03</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">古砚收藏该如何保养呢？</a></div>
+                            <div class="fr">2018-12-03</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">北京故宫博物院副院长娄伟讲述两岸“紫禁情”</a></div>
+                            <div class="fr">2018-11-14</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <a href="javascript:;" class="more">更多&gt;&gt;</a>
+                        <li>
+                            <div class="fl"><a href="javascript:;">布展进行时 | 你所不知道的展览幕后</a></div>
+                            <div class="fr">2019-01-23</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">紫泥堂 · 未来进行时——中国当代艺术邀请展 | 第六届广州三年展平行展</a></div>
+                            <div class="fr">2019-01-23</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">行进中的当代艺术 | 紫泥堂·未来进行时——中国当代艺术邀请展正式开幕</a></div>
+                            <div class="fr">2019-01-23</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">参展艺术家解读 | 冯峰的世界版图，管怀宾的流隙</a></div>
+                            <div class="fr">2019-01-23</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">参展艺术家解读 | 陈文令的少年心、邓箭今的众生群像</a></div>
+                            <div class="fr">2019-01-23</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">参展艺术家解读 | 苍鑫的暗黑世界，蔡全利的江山景图</a></div>
+                            <div class="fr">2019-01-23</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">参展艺术家解读 | 蔡广斌的当代水墨，车建全的空灵世界</a></div>
+                            <div class="fr">2019-01-23</div>
+                        </li>
+                        <li>
+                            <div class="fl"><a href="javascript:;">参展艺术家解读 | 方力钧的光头、方少华的经典文本</a></div>
+                            <div class="fr">2019-01-23</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4L 艺术品 --banner -->
+        <div class="banner1">
+            <a href=""><img src="img/index/yishu_banner.jpeg"></a>
+        </div>
+        <!-- 4L 艺术品拍卖 -->
+        <div class="paimai">
+            <!-- 拍卖标题栏 -->
+            <div class="web_top">
+                <div class="fl">
+                    拍卖
+                </div>
+                <a href="javascript:;" class="fr">更多&gt;&gt;</a>
+            </div>
+            <!-- 拍卖信息选择表单 -->
+            <div class="paimai_ss">
+                <form action="">
+                    <select class="ysj_sel" id="ysj_sel">
+                        <option value="">艺术家</option>
+                        <option value="韩建宇">-韩建宇</option>
+                        <option value="邓箭今">-邓箭今</option>
+                        <option value="姚永全">-姚永全</option>
+                        <option value="陈凯">-陈凯</option>
+                        <option value="乔平">-乔平</option>
+                        <option value="许鸿基">-许鸿基</option>
+                        <option value="车萱">-车萱</option>
+                        <option value="黄伯沂">-黄伯沂</option>
+                        <option value="欧广勇">-欧广勇</option>
+                        <option value="麦昕">-麦昕</option>
+                        <option value="林猛">-林猛</option>
+                        <option value="肖宇勇">-肖宇勇</option>
+                        <option value="黄灼沂">-黄灼沂</option>
+                        <option value="庄鸿杰">-庄鸿杰</option>
+                        <option value="张海鹏">-张海鹏</option>
+                        <option value="石磊">-石磊</option>
+                        <option value="彭杜">-彭杜</option>
+                        <option value="莫希亮">-莫希亮</option>
+                        <option value="江衡">-江衡</option>
+                        <option value="黄一山">-黄一山</option>
+                        <option value="陈公拓">-陈公拓</option>
+                        <option value="朱德玲">-朱德玲</option>
+                        <option value="侯军">-侯军</option>
+                        <option value="郑川">-郑川</option>
+                        <option value="彭志健">-彭志健</option>
+                        <option value="张展欣">-张展欣</option>
+                        <option value="满开慧">-满开慧</option>
+                        <option value="车健全">-车健全</option>
+                        <option value="杨小彦">-杨小彦</option>
+                        <option value="邵戈">-邵戈</option>
+                        <option value="蔡全利">-蔡全利</option>
+                        <option value="苍鑫">-苍鑫</option>
+                        <option value="张琪凯">-张琪凯</option>
+                        <option value="陈文令">-陈文令</option>
+                        <option value="付毅兵">-付毅兵</option>
+                        <option value="陈石松">-陈石松</option>
+                        <option value="李冠廷">-李冠廷</option>
+                        <option value="杨倩">-杨倩</option>
+                        <option value="高晓凯">-高晓凯</option>
+                </select>
+                    <select class="ysj_sel" id="lb_sel">
+                        <option value="">类别</option>
+                        <option value="丙烯">-丙烯</option>
+                        <option value="复制品">-复制品</option>
+                        <option value="综合材料">-综合材料</option>
+                        <option value="版画">-版画</option>
+                        <option value="漆画">-漆画</option>
+                        <option value="壁画">-壁画</option>
+                        <option value="陶瓷">-陶瓷</option>
+                        <option value="书法篆刻">-书法篆刻</option>
+                        <option value="插画">-插画</option>
+                        <option value="其他">-其他</option>
+                        <option value="油画">-油画</option>
+                        <option value="水墨画">-水墨画</option>
+                        <option value="唐卡">-唐卡</option>
+                        <option value="拓片">-拓片</option>
+                </select>
+                    <input type="date" name="start_time" class="paimai_time" value="2018-11-10">
+                    <input type="date" name="end_time" value="2018-11-11" class="paimai_time">
+                    <button class="paimai_ss_btn">查询预展</button>
                 </form>
+                <div class="paimai_info">
+                    <span>预展中</span>&nbsp;
+                    <span>拍卖会0个</span>&nbsp;
+                    <span>专场2个</span>&nbsp;
+                    <span>拍品6个</span>
+                </div>
             </div>
-            <div class="toptel">
-                <p>客服热线（免长途费）</p>
-                <span>400-694-0910</span>
+            <!-- 拍卖内容 左 -->
+            <div class="paimai_left">
+                <div class="paimai_sub">
+                    <p class="paimai_subtitle">专场</p>
+                    <a class="paimai_submore" href="javascript">更多&gt;&gt;</a>
+                </div>
+                <div class="paimai_subimgs">
+                    <a href="javascript:;">
+                        <img src="img/index/zhuanchang_1.png">
+                        <p>四海集珍-中国书画专场 </p>
+                    </a>
+                </div>
+                <div class="paimai_subimgs">
+                    <a href="javascript:;">
+                        <img src="img/index/zhuanchang_1.png">
+                        <p>艺术名家精品专场 </p>
+                    </a>
+                </div>
+            </div>
+            <!-- 拍卖内容 中 -->
+            <div class="paimai_center">
+                <div class="paimai_sub">
+                    <p class="paimai_subtitle" style="text-indent: 30px">拍品推荐</p>
+                    <a class="paimai_submore" href="javascript">更多&gt;&gt;</a>
+                </div>
+            </div>
+            <!-- 拍卖内容 右 -->
+            <div class="paimai_right">
+                <div class="paimai_right_up">
+                    <img src="img/icon/ewm.jpg">
+                    <p>每天珍品</p>
+                    <p style="font-size:26px;margin:5px 0;">专属拍卖</p>
+                    <p>那些事儿</p>
+                </div>
+                <div class="paimai_right_down">
+                    <a href="javascript:;">艺术家</a>
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th>名字</th>
+                            <th>均价</th>
+                            <th>涨跌幅</th>
+                        </tr>
+                        <tr>
+                            <td>欧广勇</td>
+                            <td>1,400</td>
+                            <td>↓ 0%</td>
+                        </tr>
+                        <tr>
+                            <td>韩建宇</td>
+                            <td>813</td>
+                            <td>↓ 19%</td>
+                        </tr>
+                        <tr>
+                            <td>陈公拓</td>
+                            <td>0</td>
+                            <td>↓ 0%</td>
+                        </tr>
+                        <tr style=" border-bottom: 10px solid #fff;">
+                            <td>郑川</td>
+                            <td>0</td>
+                            <td>↓ 0%</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
+
+        <!-- 5L 首页视频 -->
+        <div class="index_sp">
+            <div class="web_top">
+                <div class="fl">视频</div>
+                <a href="" class="fr">更多&gt;&gt;</a>
+            </div>
+            <div class="index_sp_main">
+                <img src="img/index/sp.jpeg">
+                <img src="img/icon/bofang.png" id="v_sp_bf">
+                <p>广东紫泥堂艺术中心 </p>
+            </div>
+        </div>
+
+        <!-- 6L 顾问艺术家 -->
+        <div class="index_gwysj">
+            <div class="index_ysgw">
+                <div class="web_top">
+                    <div class="fl">
+                        艺术顾问
+                    </div>
+                    <a href="javascript:;" class="fr">更多&gt;&gt;</a>
+                </div>
+                <div class="ysgw_main">
+                    <ul>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="img/index/ysgw_1.jpeg">
+                                <p>张展欣</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="img/index/ysgw_2.jpeg">
+                                <p>邓箭今</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="img/index/ysgw_3.jpeg">
+                                <p>欧广勇</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="index_ysj">
+                <div class="web_top">
+                    <div class="fl">
+                        艺术家
+                    </div>
+                    <a href="javascript:;" class="fr">更多&gt;&gt;</a>
+                </div>
+                <div class="ysj_main">
+                    <ul>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="img/index/ysj_1.jpeg">
+                                <p>韩建宇</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <img src="img/index/ysj_2.jpeg">
+                                <p>姚永全</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- 7L 艺术机构 -->
+        <div class="index_ysjg">
+            <div class="web_top">
+                <div class="fl">
+                    艺术机构
+                </div>
+                <a href="javascript:;" class="fr">更多&gt;&gt;</a>
+            </div>
+            <!-- 艺术机构 图片滚动链接 -->
+            <div class="jgname">
+                <ul id="ysjg_imgs">
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_1.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_2.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_3.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_4.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_5.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_6.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_7.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_8.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_9.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_10.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_1.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_2.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_3.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_4.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_5.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_6.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_7.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_8.jpeg"></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><img src="img/index/ysjg_9.jpeg"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
+    <!-- 页面右下角的悬浮框 -->
+    <ul class="rfudong">
+        <li>
+            <a href="javascript:;">
+                <p>
+                    <img src="img/icon/rfd1.png">
+                </p>
+                <p>下载APP</p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <p><img src="img/icon/rfd2.png"></p>
+                <p>客服</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <p><img src="img/icon/rfd3.png"></p>
+                <p>回顶部</p>
+            </a>
+        </li>
+    </ul>
+
+
+    <footer>
+        <iframe src="footer1_css.html" frameborder="0" scrolling="no" width="100%" height="351px"></iframe>
+    </footer>
+    <script src="js/index.js">
+    </script>
 </body>
 
 </html>

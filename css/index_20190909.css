@@ -1,0 +1,145 @@
+/* 水平导航下的下滑菜单 */
+
+.wrapbox2 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 下滑菜单 */
+
+.topss {
+    width: 1200px;
+    background: url(../img/index/bg2.png);
+    position: relative;
+    overflow: visible;
+    display: flex;
+}
+
+.topss li {
+    color: #000;
+    /* float: left; */
+    width: 300px;
+    line-height: 22px;
+    margin: 0px 40px 0px 25px;
+    padding: 10px 0;
+    padding-right: 60px;
+    border-right: 1px dashed #ddd;
+    box-sizing: content-box;
+}
+
+.topss li a {
+    margin-left: 15px;
+    width: 60px;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    color: #333;
+}
+
+.topss li a:hover {
+    text-decoration: underline;
+    color: #666;
+}
+
+.topss li.noright {
+    padding-right: 0;
+    margin-right: 0;
+    border: 0;
+}
+
+.topss li span {
+    display: inline-block;
+    width: 60px;
+}
+
+.xiahua {
+    background: #eee;
+    top: 30px;
+    left: 0px;
+    position: absolute;
+    width: 1200px;
+    padding: 0px 0px 10px;
+    z-index: 100;
+    display: flex;
+    opacity: 0;
+}
+
+.xiahua a {
+    margin-bottom: 5px;
+}
+
+.xiahua li .xiahua_m {
+    padding-left: 60px;
+}
+
+.topss:hover .xiahua {
+    opacity: 1;
+}
+
+
+/* 轮播图左右箭头 */
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 4%;
+    height: 20%;
+    top: 40%;
+    background: #eee;
+    border-radius: 0.5rem;
+}
+
+
+/* 轮播图指示器 */
+
+.carousel-indicators li {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #ddd;
+    margin: 0 0.4rem;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background: #666;
+}
+
+
+/* 主导航  字体颜色设置 */
+
+#nav li.nav-item>a {
+    color: #fff;
+}
+
+
+/* 主导航鼠标悬停效果设置 */
+
+#nav li.nav-item>a:hover {
+    background: #f33;
+}
+
+
+/* 1L 每日推荐 图片尺寸 */
+
+#rec-daily a>img {
+    width: 100%;
+}
+
+#rec-daily a {
+    color: #222;
+}
+
+#rec-daily a:hover {
+    color: #666;
+    text-decoration: none;
+}
+
+
+/* 2L 人气推荐 分割线 */
+
+hr.bg-dark {
+    height: 0.08rem;
+}

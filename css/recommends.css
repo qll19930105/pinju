@@ -1,0 +1,100 @@
+/* 产品列表 ul样式 */
+
+ul#recommends_imgs {
+    width: 1210px;
+    height: 1132px;
+    margin: 30px 0 40px 0;
+    overflow: hidden;
+}
+
+ul#recommends_imgs>li {
+    float: left;
+    width: 232px;
+    height: 277px;
+    margin: 0 10px 6px 0;
+}
+
+ul#recommends_imgs>li>a:first-child {
+    border: 1px solid #ddd;
+    display: block;
+    overflow: hidden;
+}
+
+ul#recommends_imgs>li a img {
+    width: 100%;
+    transition: transform .3s;
+}
+
+ul#recommends_imgs>li a img:hover {
+    transform: scale(1.1);
+}
+
+
+/* 1L图片 标题和价格 样式 */
+
+ul#recommends_imgs li p {
+    margin: 0;
+    width: 232px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #f00;
+    overflow: hidden;
+}
+
+ul#recommends_imgs li p>a {
+    height: 40px;
+    line-height: 40px;
+    color: #000;
+    width: 140px;
+    height: 40px;
+}
+
+ul#recommends_imgs li p>a:hover {
+    color: #666;
+}
+
+ul#recommends_imgs li p>span {
+    width: 85px;
+    height: 40px;
+    text-align: right;
+}
+
+
+/* 2L 分页 */
+
+ul#recommends_pagination {
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+ul#recommends_pagination li {
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 10px;
+    height: 30px;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    margin: 0 3px;
+    height: 30px;
+    cursor: pointer;
+    color: #111;
+}
+
+ul#recommends_pagination li:hover,
+ul#recommends_pagination li.active {
+    color: #fff;
+    border: 1px solid #da0d5d;
+    background: #da0d5d;
+}
+
+ul#recommends_pagination li.disabled {
+    background: #efefef;
+    color: #111;
+    border: 1px solid #efefef;
+    cursor: default;
+}

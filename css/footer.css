@@ -1,0 +1,17 @@
+.my_footer_bg {
+    width: 100%;
+    background: #dedede;
+    overflow: hidden;
+}
+
+.my_footer {
+    width: 1200px;
+}
+
+.my_footer_bg .border-bottom {
+    border-bottom-color: #ccc !important;
+}
+
+.font_black {
+    color: #000;
+}
