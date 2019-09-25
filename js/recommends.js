@@ -51,31 +51,46 @@ $("#recommends_pagination").on("click", "li", function() {
         loadMore(pno);
     }
     if (i == 0) {
+        // 点击上一张按钮 active的li会变成前一个，当$(this).next().hasClass("active")为true时，$(this).addClass("disabled");return;   否则 $(this).removeClass("disabled")，pno-- li.active class转移，加载数据，并显示到页面上，再次对$(this).next().hasClass("active")进行判断
+        console.log($(this).next().hasClass("active"))
         pno--;
-        console.log(pno)
-        if (pno == 2) {
-            $(this).addClass("disabled")
-                // $("li.active").removeClass("active");
-            loadMore(pno);
+        if ($(this).next().hasClass("active")) {
+            pno = 1;
+            $(this).addClass("disabled");
+            $("#next").removeClass("disabled")
             return;
         } else {
+            // if (pno > 1) {
             $(this).removeClass("disabled");
+            // }
             $("li.active").removeClass("active").prev().addClass("active");
             loadMore(pno);
+            if ($(this).next().hasClass("active")) {
+                $(this).addClass("disabled");
+                $("#next").removeClass("disabled")
+                return;
+            }
         }
     }
+
     if (i == 9) {
         pno++;
-        if (pno == 7) {
-            $(this).addClass("disabled")
-                // $("li.active").removeClass("active");
-            loadMore(pno);
+        if ($(this).prev().hasClass("active")) {
+            pno = 8;
+            $(this).addClass("disabled");
+            $("#prev").removeClass("disabled")
             return;
         } else {
+            // if (pno > 1) {
             $(this).removeClass("disabled");
+            // }
             $("li.active").removeClass("active").next().addClass("active");
             loadMore(pno);
+            if ($(this).prev().hasClass("active")) {
+                $(this).addClass("disabled");
+                $("#prev").removeClass("disabled")
+                return;
+            }
         }
-
     }
 })
