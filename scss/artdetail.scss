@@ -1,0 +1,9 @@
+// artdetail 页面样式
+// 主体内容尺寸 scss测试
+#artdetail {
+    width: 500px;
+    height: 100px;
+    &:hover {
+        background: #383;
+    }
+}
