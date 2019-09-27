@@ -9,7 +9,7 @@ $(function() {
                 var mrtj = result;
                 for (var i = 0; i < mrtj.length; i++) {
                     html += ` <li>
-                <a href="javascript:;"><img src="${mrtj[i].img}"></a>
+                <a href="/artdetail.html?pid=${i+1}"><img src="${mrtj[i].img}"></a>
                 <p>
                     <a href="javascript:;" class="fl">${mrtj[i].name}</a>
                     <span class="fr">￥${mrtj[i].price}</span>
@@ -29,7 +29,7 @@ $(function() {
                 var rqtj = result;
                 for (var i = 0; i < 8; i++) {
                     html += ` <li>
-                <a href="javascript:;"><img src="${rqtj[i].img}"></a>
+                <a href="/artdetail.html?pid=${9+i}"><img src="${rqtj[i].img}"></a>
                 <p>
                     <a href="javascript:;" class="fl">${rqtj[i].name}</a>
                     <span class="fr">￥${rqtj[i].price}</span>

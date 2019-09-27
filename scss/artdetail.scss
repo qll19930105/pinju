@@ -1,9 +1,205 @@
 // artdetail 页面样式
-// 主体内容尺寸 scss测试
-#artdetail {
-    width: 500px;
-    height: 100px;
-    &:hover {
-        background: #383;
+// 混合器：边框
+@mixin border($size, $color) {
+    border: $size+px solid $color;
+}
+
+// 混合器：尺寸
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+// 1L 面包屑导航
+.site {
+    @include wh(100%, 50px);
+    line-height: 50px;
+    a {
+        color: #333;
+        &:hover {
+            color: #666;
+        }
+    }
+}
+
+// 2L 商品详情信息
+.art_detail {
+    @include wh(100%, 650px);
+    overflow: hidden;
+    .art_left {
+        width: 500px;
+        height: 650px;
+        float: left;
+        // 大图区域
+        div.art_imgl {
+            @include wh(500px, 500px);
+            img {
+                display: inline-block;
+                box-sizing: border-box;
+                width: 100%;
+                @include border(1, #ddd);
+            }
+        }
+        // 小图列表
+        div.art_imgs {
+            @include wh(500px, 130px);
+            margin-top: 20px;
+            overflow: hidden;
+            .art_imgs_right {
+                @include wh(10px, 45px);
+                float: left;
+                margin: 40px 10px 0 0;
+            }
+            .art_imgs_left {
+                @include wh(10px, 45px);
+                float: left;
+                margin: 40px 0 0 10px;
+            }
+            ul {
+                float: left;
+                @include wh(460px, 130px);
+                overflow: hidden;
+                li {
+                    width: 128px;
+                    height: 128px;
+                    float: left;
+                    padding: 0 12px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        @include border(1, #ddd);
+                        box-sizing: border-box;
+                        padding: 2px;
+                    }
+                }
+            }
+        }
+    }
+    .art_right {
+        width: 650px;
+        height: 580px;
+        float: right;
+        background: #faa;
+    }
+}
+
+// 3L 商品介绍
+.art_describe {
+    box-sizing: border-box;
+    @include wh(100%, auto);
+    margin: 50px 0;
+    overflow: hidden;
+    // 商品介绍 标题栏
+    ul.art_describe_title {
+        @include wh(100%, 41px);
+        line-height: 40px;
+        border-bottom: 1px solid #ddd;
+        // 每个标题样式
+        li {
+            &:first-child {
+                border-left: 1px solid #ddd;
+            }
+            @include wh(150px, 40px);
+            cursor: pointer;
+            float: left;
+            background: #f6f6f6;
+            text-align: center;
+            border-right: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            color:#666;
+            &:hover {
+                color: #888;
+            }
+            &.click {
+                border-top: 1px solid #a10109;
+                color: #000;
+                background: #fff;
+                height: 41px;
+            }
+        }
+    }
+    // 标题对应的内容调转
+    .art_describe_checked {
+        &::before {
+            display: table;
+            content: "";
+        }
+        @include border(1, #ddd);
+        border-top: 0;
+        // 设置选中内容与未选中内容display
+        &>div {
+            display: none;
+            padding: 20px;
+            line-height: 30px;
+            &.checked {
+                display: block;
+            }
+        }
+        // 
+    }
+}
+
+// 4L 猜你喜欢 标题
+.prefer_title {
+    @include wh(1199px, 42px);
+    margin-bottom: 30px;
+    @include border(1, #ddd);
+    border-top: 0;
+    border-right: 0;
+    div {
+        @include wh(150px, 42px);
+        line-height: 40px;
+        border-top: 1px solid #a10109;
+        border-right: 1px solid #ddd;
+        text-align: center;
+        color: #000;
+        background: #fff;
+    }
+}
+
+// 5L 猜你喜欢 内容
+.prefer_main {
+    @include wh(1210px, 283px);
+    margin-bottom: 40px;
+    overflow: hidden;
+    ul>li {
+        @include wh(232px, 277px);
+        margin-right: 10px;
+        margin-bottom: 6px;
+        float: left;
+        // 图片
+        a:first-child {
+            display: block;
+            @include wh(230px, 230px);
+            @include border(1, #ddd);
+            margin-bottom: 5px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                transition: transform .3s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        // 标题
+        a:nth-child(2) {
+            float: left;
+            @include wh(140px, 40px);
+            line-height: 40px;
+            color: #333;
+            &:hover {
+                color: #666;
+            }
+        }
+        // 价格
+        p {
+            margin: 0;
+            float: right;
+            color: #f00;
+            text-align: right;
+            @include wh(85px, 40px);
+            line-height: 40px;
+        }
     }
 }

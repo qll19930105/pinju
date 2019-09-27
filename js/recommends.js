@@ -1,8 +1,6 @@
 $(function() {
     $("#nav #art").removeClass("hov");
     $("#nav #recommends").addClass("hov");
-
-
 })
 
 function loadMore(pno) {
@@ -15,9 +13,13 @@ function loadMore(pno) {
             var recommends = result;
             for (var i = 0; i < recommends.length; i++) {
                 html += ` <li>
-                    <a href="javascript:;"><img src="${recommends[i].img}"></a>
+                    <a href="/artdetail.html?pid=${recommends[i].pid}">
+                       <img src="${recommends[i].img}">
+                    </a>
                     <p>
-                        <a href="javascript:;" class="fl">${recommends[i].name}</a>
+                        <a href="/artdetail.html?pid=${recommends[i].pid}" class="fl">
+                            ${recommends[i].name}
+                        </a>
                         <span class="fr">￥${recommends[i].price}</span>
                     </p>
                     </li>`

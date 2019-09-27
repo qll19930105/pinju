@@ -63,3 +63,12 @@ app.get("/recommends", (req, res) => {
         res.send(result);
     })
 });
+
+// 根据接送到的pid查询对应得产品信息
+app.get("/artdetail", (req, res) => {
+    var pid = req.query.pid;
+    pool.query("SELECT * FROM pj_products WHERE pid=?", [pid], (err, result) => {
+        if (err) throw err;
+        res.send(result);
+    })
+})
